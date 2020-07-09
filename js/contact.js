@@ -7,6 +7,7 @@ function validateForm(event) {
     console.log("Form was submitted");
 
     const firstName = document.querySelector("#firstName");
+    firstName.required = true;
     const firstNameError = document.querySelector("#firstNameError");
     const firstNameValue = firstName.value;
 
@@ -83,7 +84,7 @@ function checkInputLengthFirstName(value) {
 function checkInputLengthLastName(value) {
     const trimmedValueLastName = value.trim();
 
-    if (trimmedValueLastName.length >= 2) {
+    if (trimmedValueLastName.length >= 3) {
         return true;
     }
     else {
@@ -111,7 +112,7 @@ function invalidEmail(email) {
 function checkInputLengthSubject(value) {
     const trimmedValueSubject = value.trim();
 
-    if (trimmedValueSubject.length >= 2) {
+    if (trimmedValueSubject.length >= 7) {
         return true;
     }
     else {
@@ -122,7 +123,7 @@ function checkInputLengthSubject(value) {
 function checkInputLengthMessage(value) {
     const trimmedValueMessage = value.trim();
 
-    if (trimmedValueMessage.length >= 20) {
+    if (trimmedValueMessage.length >= 15) {
         return true;
     }
     else {
