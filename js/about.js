@@ -1,34 +1,48 @@
-    const container = document.querySelector(".container");
+
+
+function reverse(n) {
+    const kids = n.childNodes;
+    const numKids = kids.length;
+
+    for (let i = numKids-1; i >= 0; i--) {
+        const c = n.removeChild(kids[i]);
+        n.appendChild(c);
+    }
+}   
+reverse();
+
+
+/*
+    function reverse(n) {
+        const container = document.querySelector(".about").childNodes;
+        console.log(container);
     
-    // console.log(paragraphs);
+    for (let i = container-1 ; i >= 0; i--) {
+        console.log(container[i]);
+        const c = n.removeChild(container[i]);
+        console.log(c);
+        n.appendChild(c);
+        console.log(c);
+        
+    }
+
+}
+   reverse();
+   */
+    /*
+    const container = document.querySelector(".about");
 
     let newHTML = "";
 
-    // const paragraphs = document.querySelectorAll("p");
+    const paragraphs = document.querySelectorAll("p");
 
-    /*for (let i = paragraphs.length -1; i >= 0; i--) {
-        console.log(paragraphs[i]); */
+    for (let i = paragraphs.length -1 ; i >= 0; i--) {
+        console.log(paragraphs[i]);
+        newHTML +=  `<div class="about">
+                        <p>${paragraphs[i]}</p>
+                    </div>`
+    }
 
-        const newOrder = `<main class="container content">
-                            <h1>About</h1>
+    container.innerHTML = newHTML;
 
-                                <div class="about">
-                                    <p>This is paragraph 2.</p>
-                                    <p>This is the first paragraph.</p>
-                                </div>
-                         </main>`;
-        newHTML += newOrder;
-
-        // console.log(newOrder);
-
-container.innerHTML = newHTML;
-
-// }
-
-/* Reverse/negative for loops is something that we 
-have not covered in the curriculum. But i tried and
-it failed, even after some guidance I couldnt get it
-working. But as the task said I have written code to
-reverse the two paragraphs so I hope that this is
-acceptable, if not I would very much like to see an
-example of how this should have been solved. */
+    */
