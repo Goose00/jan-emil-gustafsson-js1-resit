@@ -1,32 +1,34 @@
+const container = document.querySelector(".container");
+
+container.addEventListener("change", addDivs);
 
 
-
-
-/* const container = document.querySelector(".container");
-
-const numberInput = document.querySelector("input").value;
-console.log(numberInput);
-
-const divs = document.querySelector(".dynamic-divs");
-
-const button = document.querySelector(".reset");
 
 function addDivs() {
+    console.log("Div was added");
 
-    console.log(numberInput);
+    const numbers = document.querySelector("input");
+    const numbersValue = numbers.value;
+    console.log(numbersValue);
+    const divs = document.querySelector(".dynamic-divs");
 
- for (let i = 0; i < numberInput.length; i++) {
 
-    if (numberInput === 4) {
-        console.log("hello");
-    }
-    
+    try {
+        for (let i = 0; i < numbersValue.length; i++) {
+
+        divs.innerHTML = `<div class="dynamic-divs">Number ${numbersValue}</div>`;
+        }
+
+    } catch (error) {
+        console.log("error");
+    } finally {
+        console.log("numbers are fetched");
 }
 
- }
-
+}
 addDivs();
-*/
+
+
 /* reset button!
 
 function reset() {
@@ -37,26 +39,5 @@ function reset() {
 
 
 button.addEventListener("click", reset, false);
-
-*/
-
-/*
-document.addEventListener("click", event) 
-    const numberInput = document.querySelector("input").value;
-    console.log(numberInput);
-   document.querySelector("div.dynamic-divs")[0].innerHTML = "";
-    
-    for (let i = 1; i <=(numberInput); i++) {
-        const divList = document.createElement("div");
-        console.log(divList);
-        divList.innerHTML = `Number: ${i}`;
-        document.querySelector("div.dynamic-divs"[0].appendChild(divList));
-    }
-    
-
-    
-
-;
-
 
 */
