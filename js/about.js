@@ -1,36 +1,5 @@
-
-
-function reverse(n) {
-    const kids = n.childNodes;
-    const numKids = kids.length;
-
-    for (let i = numKids-1; i >= 0; i--) {
-        const c = n.removeChild(kids[i]);
-        n.appendChild(c);
-    }
-}   
-reverse();
-
-
-/*
-    function reverse(n) {
-        const container = document.querySelector(".about").childNodes;
-        console.log(container);
-    
-    for (let i = container-1 ; i >= 0; i--) {
-        console.log(container[i]);
-        const c = n.removeChild(container[i]);
-        console.log(c);
-        n.appendChild(c);
-        console.log(c);
-        
-    }
-
-}
-   reverse();
-   */
-    /*
-    const container = document.querySelector(".about");
+   
+   const container = document.querySelector(".about");
 
     let newHTML = "";
 
@@ -45,4 +14,8 @@ reverse();
 
     container.innerHTML = newHTML;
 
-    */
+
+/* I have really struggeled with this and got caught up in not making
+it work properly. I have asked for help and hav gotten good advice but
+I did not manage to apply the tips into my code unfortunately. I really
+hope I say "Oh, thats how!" when I se an example of the solution. */

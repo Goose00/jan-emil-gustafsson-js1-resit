@@ -12,7 +12,9 @@ function addDivs() {
     console.log(numbersValue);
     const divs = document.querySelector(".dynamic-divs");
 
-
+/* I really tried figuring this out, my mistake I think is I am overthinking and need
+to see this in an example again to fully grasp it. But I´m happy I got the one div and
+the reset button working */
     try {
         for (let i = 0; i < numbersValue.length; i++) {
 
@@ -29,15 +31,18 @@ function addDivs() {
 addDivs();
 
 
-/* reset button!
+// reset button!
+
+const button = document.querySelector("button.reset");
 
 function reset() {
     console.log("button has been pressed");
+
+    click = document.querySelector(".dynamic-divs").innerHTML = " ";
 }
 
 
 
 
-button.addEventListener("click", reset, false);
+button.addEventListener("click", reset, true);
 
-*/
